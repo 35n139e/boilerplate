@@ -1,0 +1,9 @@
+
+
+
+@charset "utf-8";
+.footer{
+  @include breakpoint("tablet-wide", $type: min) {
+    width: 100%;
+  }
+}

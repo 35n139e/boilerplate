@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+// 表示
+//
+// ブレイクポイントを起点に表示させる際に使用するユーティリティです。
+// 
+// Markup:
+// <div class="util-show-pc">PC（1024px以上）で表示</div>
+// <div class="util-show-tablet">タブレット（768px以上1024px以下）で表示</div>
+// <div class="util-show-phone">スマホ（768px以下）で表示</div>
+//
+// Styleguide Utility.show
+
+
+.util-show-pc {
+	@include breakpoint("tablet-wide", $type: max) {
+		display: none!important;
+	}
+}
+.util-show-tablet {
+	@include breakpoint("tablet", $type: max) {
+		display: none!important;
+	}
+	@include breakpoint("tablet-wide", $type: min) {
+		display: none!important;
+	}
+}
+.util-show-phone {
+	@include breakpoint("tablet", $type: min) {
+		display: none!important;
+	}
+}

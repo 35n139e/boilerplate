@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// 文字寄せ
+//
+// 文字を寄せるためのユーティリティになります。
+//
+// Markup:
+// <div class="util-al-center">util-al-center</div>
+// <div class="util-al-right">util-al-right</div>
+// <div class="util-al-left">util-al-left</div>
+//
+// Styleguide Utility.align
+
+.util-al-center{
+	text-align: center !important;
+}
+.util-al-right{
+	text-align: right !important;
+}
+.util-al-left{
+	text-align: left !important;
+}

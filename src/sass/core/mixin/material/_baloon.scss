@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@mixin boxBaloon($color:#ff0, $border:#ccc, $size:10px, $arrowPositionNegative:"top"){
+	$arrowPosition: "" !default;
+	position: relative;
+	background: $color;
+	border: 1px solid $border;
+	vertical-align: middle;
+	border-radius: 3px;
+
+	@if $arrowPositionNegative == "top" or $arrowPositionNegative == "bottom"{
+		$arrowPosition: "left";
+
+	}
+	@if $arrowPositionNegative == "left" or $arrowPositionNegative == "right"{
+		$arrowPosition: "top";
+	}
+
+	&:after,
+	&:before {
+		@include square(0);
+		position: absolute;
+		border: solid transparent;
+		content: "";
+		#{$arrowPosition}: 50%;
+		#{$arrowPositionNegative}: 100%;
+	}
+
+	&:after {
+		border-#{$arrowPositionNegative}-color: $color;
+		border-width: $size;
+		margin-#{$arrowPosition}: -#{$size};
+	}
+
+	&:before {
+		border-#{$arrowPositionNegative}-color: $border;
+		border-width: ($size + 2px);
+		margin-#{$arrowPosition}: - ($size + 2px);
+	}
+}

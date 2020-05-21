@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+.mod-list-number {
+  margin-bottom: 1em;
+  >li{
+    position: relative;
+    padding-left: 3rem;
+    margin-top: 0.5em;
+    &:first-child{
+      margin-top: 0;
+    }
+    .num {
+      position: absolute;
+      left: 0;
+      width: 2rem;
+      text-align: right;
+    }
+  }
+  p{
+    margin: 0;
+  }
+  .mod-list-number{
+    margin-top: 0.5em;
+  }
+}

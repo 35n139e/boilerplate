@@ -1,0 +1,75 @@
+@charset "utf-8";
+// ページャー
+//
+// ページャーのモジュールになります。
+//
+// Markup:
+// <ol class="mod-nav-pager">
+//   <li class="{{modifier_class}}"><a href="">&lt;&lt;</a></li>
+//   <li class="{{modifier_class}}"><a href="">&lt;</a></li>
+//   <li class="{{modifier_class}}"><a href="">94</a></li>
+//   <li class="{{modifier_class}}"><a href="">95</a></li>
+//   <li class="{{modifier_class}}"><a href="">96</a></li>
+//   <li class="{{modifier_class}}"><a href="">97</a></li>
+//   <li class="{{modifier_class}}"><a href="">98</a></li>
+//   <li class="{{modifier_class}}"><a href="">99</a></li>
+//   <li class="{{modifier_class}}"><a href="">100</a></li>
+//   <li class="{{modifier_class}}"><a href="">&gt;</a></li>
+//   <li class="{{modifier_class}}"><a href="">&gt;&gt;</a></li>
+// </ol>
+//
+// ._active - アクティブクラス
+// ._disabled - ディスエイブル用クラス（先頭末尾や、次ページへのリンクがない時に。）
+// 
+// Styleguide module.navigation.pager
+
+.mod-nav-pager {
+  margin: $_gutter*2 0 $_gutter;
+  display: flex;
+  justify-content: flex-end;
+
+  li {
+    display: flex;
+    width: 3.5em;
+    height: 3.5em;
+    background: #fff;
+    margin-left: 5px;
+    
+    &:first-child{
+      margin-left: 0;
+    }
+    &._active{
+      a{
+        color: $_baseFont-Color;
+        font-weight: bold;
+        border-width: 2px;
+        border-color: #337bbe;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+    &._disabled {
+      a{
+        color: $__pager-color_disabled;
+        cursor: default;
+        border-color: $__pager-color_disabled;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid $__pager-color-border;
+    border-radius: 3px;
+    &:hover {
+      background-color: $__pager-color_hover;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@charset "utf-8";
+// margin（上下）調整
+//
+// margin（上下）調整を行うユーティリティです。5px刻みで、0px～40pxまであります。
+//
+// ボトムは<code class="styleGuide-code">mb-XX</code>、トップは<code class="styleGuide-code">mt-XX</code>になります。
+//
+// Markup:
+// <div class="{{modifier_class}}">{{modifier_class}}px</div>
+// 
+// .util-mb-00 - margin-bottom: 0px
+// .util-mb-10 - margin-bottom: 10px
+// .util-mb-20 - margin-bottom: 20px
+// .util-mb-35 - margin-bottom: 35px
+// .util-mb-40 - margin-bottom: 40px
+//
+// Styleguide Utility.margin
+
+@for $i from 0 through 8 {
+  @if $i==0 or $i==1 {
+    .util-mb-0#{$i * 5} {
+      margin-bottom: $i * 5px !important;
+    }
+    .util-mt-0#{$i * 5} {
+      margin-top: $i * 5px !important;
+    }
+  }
+  @else {
+    .util-mb-#{$i * 5} {
+      margin-bottom: $i * 5px !important;
+    }
+    .util-mt-#{$i * 5} {
+      margin-top: $i * 5px !important;
+    }
+  }
+}
+

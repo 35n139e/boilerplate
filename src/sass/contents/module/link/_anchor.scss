@@ -1,0 +1,26 @@
+@charset "utf-8";
+// アンカーリンク
+//
+// アンカーリンクのモジュールになります。
+//
+// Markup:
+// <div class="mod-link-anchor">
+//   <a href="">アンカーリンク</a>
+//   <a href="">アンカーリンク</a>
+//   <a href="">アンカーリンク</a>
+// </div>
+// 
+// Styleguide module.link.anchor
+
+.mod-link-anchor {
+  a{
+    display: inline-block;
+    margin-right: 0.5em;
+    &:before{
+      @include icon-arrow($color:$_color-text_light, $size:5px, $arrowNegativeDirection:"top");
+      margin-right: 0.3em;
+      vertical-align: middle;
+      margin-top: 2px;
+    }
+  }
+}

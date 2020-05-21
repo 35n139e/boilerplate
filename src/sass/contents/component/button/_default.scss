@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+// defaultボタン
+//
+// 用途用途用途用途用途用途用途用途用途
+//
+// Markup:
+// <a class="btn-default {{modifier_class}}" href="#">defaultボタン</a>
+// <button class="btn-default {{modifier_class}}">defaultボタン</button>
+// 
+// :hover - hover style
+// 
+// Styleguide component.button.default
+
+
+.btn-default{
+  $_btn-color_default: #454a4d;
+  $_btn-color_default__hover: lighten($_btn-color_default, 10%);
+  color: #fff;
+  background: $_btn-color_default;
+  &:hover{
+    background-color: $_btn-color_default__hover;
+  }
+}

@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+// -----------------------------------------------------------
+// base
+// -----------------------------------------------------------
+table{
+	width: 100%;
+	margin: 0 0 $_gutter;
+	border-collapse: collapse;
+	// th,
+	// td{
+	// 	vertical-align: top;
+	// 	padding: 5px 10px;
+	// }
+}

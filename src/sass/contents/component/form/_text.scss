@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+// 単位付きinputフォーム
+//
+// 「円」や「年月日」など単位を入れたい場合などに利用します。
+//
+// Markup:
+// <input type="text" id="test01">
+// <span class="form-unit">年</span>
+// 
+// Styleguide component.form.unit
+
+.form-text{
+  width: 100%;
+  font-size: (16/14) * 1rem;
+  padding: 10px;
+}

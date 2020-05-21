@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+// 通常見出し
+//
+// 通常見出しのモジュールになります。
+//
+// Markup:
+// <h1 class="mod-hdg1"><span class="mod-hdg1--text">見出し1見出し1見出し1</span></h1>
+// <h1 class="mod-hdg2">見出し2見出し2見出し2見出し2見出し2</h1>
+// <h1 class="mod-hdg3">見出し3見出し3</h1>
+//
+// Styleguide module.heading.basic
+
+
+.mod-hdg1,
+.mod-hdg2,
+.mod-hdg3{
+  font-weight: bold;
+}
+.mod-hdg1{
+  font-size: $__hdg-fontSize-1;
+  border-bottom: $_color-line_light solid 1px;
+  background: #fff;
+  padding: 1.4em 0;
+  &--text{
+    display: block;
+    width: $_grid-pcWidth;
+    margin: 0 auto;
+    border-left: $_baseFont-Color solid 3px;
+    padding: 0.1em 0 0.1em 1.2em;
+  }
+}
+.mod-hdg2{
+  color: #666;
+  font-size: $__hdg-fontSize-2;
+  margin-bottom: 0.5em;
+}
+.mod-hdg3{
+  font-size: $__hdg-fontSize-3;
+}

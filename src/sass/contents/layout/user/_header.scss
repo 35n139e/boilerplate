@@ -1,0 +1,21 @@
+
+
+
+@charset "utf-8";
+.header{
+  &-content{
+    @include breakpoint("tablet-wide", $type: min) {
+      width: 100%;
+    }
+  }
+  &-account{
+    @include breakpoint("tablet-wide", $type: max) {
+      display: none;
+    }
+  }
+  &-menu {
+    @include breakpoint("tablet-wide", $type: min) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@charset "utf-8";
+// dataテーブル
+//
+// deta表示する際に使うテーブルになります。
+//
+// Markup:
+// <table class="mod-tbl-data {{modifier_class}}">
+// 	<thead>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<th>ほほほほ</th>
+// 			<th>ほほほほ</th>
+// 		</tr>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<th>ほほほほ</th>
+// 			<th>ほほほほ</th>
+// 		</tr>
+// 	</thead>
+// 	<tbody>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<td>ほほほほ</td>
+// 			<td>ほほほほ</td>
+// 		</tr>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<td>ほほほほ</td>
+// 			<td>ほほほほ</td>
+// 		</tr>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<td>ほほほほ</td>
+// 			<td>ほほほほ</td>
+// 		</tr>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<td>ほほほほ</td>
+// 			<td>ほほほほ</td>
+// 		</tr>
+// 	</tbody>
+// </table>
+//
+// ._stripe - stripe data table
+// 
+// Styleguide module.table.data
+
+.mod-tbl-data {
+  border: $__tbl-color-border solid 1px;
+  background-color: #fff;
+
+  th,
+  td {
+    padding: 1em 1em 1em 0;
+    font-size: (16 / 14) * 1rem;
+    text-align: left;
+    border-bottom: $__tbl-color-border solid 1px;
+    &:first-child{
+      padding-left: 1em;
+    }
+    &.mod-tbl-data--cell{
+      &__button{      
+        text-align: center;
+        vertical-align: middle;
+        .btn-default{
+          font-size: 1rem;
+          padding: 0.3em 1em;
+        }
+      }
+    }
+  }
+  th{
+    font-weight: bold;
+  }
+}

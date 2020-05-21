@@ -1,0 +1,23 @@
+@charset "utf-8";
+.container{
+  min-height: 100vh;
+  display: grid;
+  grid-template: 
+    "header" auto
+    "body" 1fr
+    "footer" 77px
+    / 1fr;
+
+
+
+
+  // display: flex;
+  // flex-wrap: nowrap;
+  // flex-direction: column;
+  // min-height: 100vh;
+  min-width: $_grid-pcWidth;
+}
+.body{
+  background: #f6f6f6;
+  grid-area: body;
+}

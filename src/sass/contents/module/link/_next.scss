@@ -1,0 +1,22 @@
+@charset "utf-8";
+// ネスクトリンク
+//
+// 「次へ」「進む」リンクのモジュールになります。
+//
+// Markup:
+// <div class="mod-link-next">
+//   <a href="">進むリンク</a>
+// </div>
+// 
+// Styleguide module.link.next
+
+.mod-link-next {
+  a{
+    display: inline-block;
+    margin-right: 0.5em;
+    &:after{
+      @include icon-arrow($color:$_color-text_light, $size:5px, $arrowNegativeDirection:"left");
+      margin-left: 0.3em;
+    }
+  }
+}

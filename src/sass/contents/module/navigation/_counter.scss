@@ -1,0 +1,35 @@
+@charset "utf-8";
+// カウンター
+//
+// カウンターのモジュールになります。
+//
+// Markup:
+// <div class="mod-nav-counter"><span class="mod-nav-counter__count">345</span>件中 1～20 件を表示</div>
+//
+// Styleguide module.navigation.counter
+
+.mod-nav-counter {
+  margin-bottom: 5px;
+  padding: 0 5px;
+  font-size: 13px;
+  letter-spacing: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+  &__count{
+    color: $_color-blue_vivid;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  &__left{
+  }
+  &__right{
+    &__scout{
+      text-align: right;
+      color: $_color-blue;
+      border:1px solid $_color-blue;
+      padding:4px;
+      background: #fff;
+    }
+  }
+}

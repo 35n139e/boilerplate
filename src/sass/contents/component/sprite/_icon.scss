@@ -1,0 +1,165 @@
+
+
+
+$sprite-icon-business-acceralation: (
+  name: 'sprite-icon-businessAcceralation',
+  x: 0px,
+  y: 85px,
+  offset-x: 0px,
+  offset-y: -85px,
+  width: 10px,
+  height: 14px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-help: (
+  name: 'sprite-icon-help',
+  x: 0px,
+  y: 31px,
+  offset-x: 0px,
+  offset-y: -31px,
+  width: 9px,
+  height: 13px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-input: (
+  name: 'sprite-icon-input',
+  x: 0px,
+  y: 0px,
+  offset-x: 0px,
+  offset-y: 0px,
+  width: 10px,
+  height: 10px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-login: (
+  name: 'sprite-icon-login',
+  x: 0px,
+  y: 71px,
+  offset-x: 0px,
+  offset-y: -71px,
+  width: 14px,
+  height: 14px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-logout: (
+  name: 'sprite-icon-logout',
+  x: 0px,
+  y: 57px,
+  offset-x: 0px,
+  offset-y: -57px,
+  width: 14px,
+  height: 14px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-mail: (
+  name: 'sprite-icon-mail',
+  x: 0px,
+  y: 10px,
+  offset-x: 0px,
+  offset-y: -10px,
+  width: 14px,
+  height: 10px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-matrix: (
+  name: 'sprite-icon-matrix',
+  x: 0px,
+  y: 20px,
+  offset-x: 0px,
+  offset-y: -20px,
+  width: 11px,
+  height: 11px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-mypage: (
+  name: 'sprite-icon-mypage',
+  x: 0px,
+  y: 99px,
+  offset-x: 0px,
+  offset-y: -99px,
+  width: 15px,
+  height: 15px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-panel-account: (
+  name: 'sprite-icon-panel-account',
+  x: 0px,
+  y: 291px,
+  offset-x: 0px,
+  offset-y: -291px,
+  width: 115px,
+  height: 89px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-panel-help: (
+  name: 'sprite-icon-panel-help',
+  x: 0px,
+  y: 204px,
+  offset-x: 0px,
+  offset-y: -204px,
+  width: 76px,
+  height: 87px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-panel-input: (
+  name: 'sprite-icon-panel-input',
+  x: 0px,
+  y: 129px,
+  offset-x: 0px,
+  offset-y: -129px,
+  width: 88px,
+  height: 75px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-setting: (
+  name: 'sprite-icon-setting',
+  x: 0px,
+  y: 114px,
+  offset-x: 0px,
+  offset-y: -114px,
+  width: 15px,
+  height: 15px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$sprite-icon-signup: (
+  name: 'sprite-icon-signup',
+  x: 0px,
+  y: 44px,
+  offset-x: 0px,
+  offset-y: -44px,
+  width: 13px,
+  height: 13px,
+  total-width: 115px,
+  total-height: 380px
+);
+
+$spritesheet: (
+  width: 115px,
+  height: 380px,
+  image: 'img/icon.png',
+  sprites: ($sprite-icon-business-acceralation, $sprite-icon-help, $sprite-icon-input, $sprite-icon-login, $sprite-icon-logout, $sprite-icon-mail, $sprite-icon-matrix, $sprite-icon-mypage, $sprite-icon-panel-account, $sprite-icon-panel-help, $sprite-icon-panel-input, $sprite-icon-setting, $sprite-icon-signup, )
+);

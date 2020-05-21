@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+html{
+	-webkit-font-smoothing: antialiased;
+}
+
+p{
+	margin-bottom: $_gutter;
+}
+a{
+  color: $_color-text_link;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+
+
+picture{
+	display: block;
+}
+img{
+	max-width: 100%;
+	vertical-align: bottom;
+}
+.img-icon{
+	margin: 0 5px;
+	vertical-align: top;
+}
+
+[aria-hidden="true"] {
+  visibility: hidden;
+  display: none;
+}
+[aria-hidden="false"] {
+  visibility: visible;
+}

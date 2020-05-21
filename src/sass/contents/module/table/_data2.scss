@@ -1,0 +1,86 @@
+@charset "utf-8";
+// dataテーブル2
+//
+// deta表示する際に使うテーブルになります。
+//
+// Markup:
+// <table class="mod-tbl-data2 {{modifier_class}}">
+// 	<thead>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<th>ほほほほ</th>
+// 			<th>ほほほほ</th>
+// 		</tr>
+// 	</thead>
+// 	<tbody>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<td>ほほほほ</td>
+// 			<td>ほほほほ</td>
+// 		</tr>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<td>ほほほほ</td>
+// 			<td>ほほほほ</td>
+// 		</tr>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<td>ほほほほ</td>
+// 			<td>ほほほほ</td>
+// 		</tr>
+// 		<tr>
+// 			<th>ほほほほ</th>
+// 			<td>ほほほほ</td>
+// 			<td>ほほほほ</td>
+// 		</tr>
+// 	</tbody>
+// </table>
+//
+// ._stripe - stripe data table
+// 
+// Styleguide module.table.data2
+
+.mod-tbl-data2 {
+  border-right: none;
+
+  td, th{
+    border-left: none;
+    padding: 20px 15px;
+  }
+
+  thead {
+    th,
+    td {
+      color: $_color-text_light;
+      font-weight: noraml;
+      background-color: #eee;
+      text-align: center;
+      font-size: $_fontSize-S;
+    }
+  }
+  tbody {
+    th {
+      font-weight: bold;
+    }
+    th,
+    td {
+      text-align: left;
+    }
+    td.small-text{
+      font-size: $_fontSize-S;
+    }
+  }
+	
+  &._stripe {
+		tbody {
+			tr {
+				&:nth-child(2n) {
+					th,
+					td {
+						background-color: $__tbl-color-cell_stripe;
+					}
+				}
+			}
+		}	
+	}
+}

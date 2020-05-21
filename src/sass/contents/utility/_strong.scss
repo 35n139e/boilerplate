@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// 強調
+//
+// 文字を強調させるためのユーティリティになります。
+//
+// Markup:
+// <div class="util-strong">util-al-center</div>
+// <div class="util-al-right">util-al-right</div>
+// <div class="util-al-left">util-al-left</div>
+//
+// Styleguide Utility.align
+
+.util-strong{
+	color: $_color-strong;
+}

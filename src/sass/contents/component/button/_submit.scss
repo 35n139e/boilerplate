@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+// submitボタン
+//
+// 用途用途用途用途用途用途用途用途用途
+//
+// Markup:
+// <a class="btn-submit {{modifier_class}}" href="#">submitボタン</a>
+// <button class="btn-submit {{modifier_class}}">submitボタン</button>
+// 
+// :hover - hover style
+// 
+// Styleguide component.button.submit
+
+
+.btn-submit{
+  $_btn-color_submit: #337bbe;
+  $_btn-color_submit__hover: lighten($_btn-color_submit, 10%);
+  
+  color: #fff;
+  background: $_btn-color_submit;
+  &:hover{
+    background-color: $_btn-color_submit__hover;
+  }
+}

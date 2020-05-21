@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+&-error {
+  &--message{
+    font-size: (20 / 14) *1rem;
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  &--text{
+    font-size: (16 / 14) *1rem;
+    text-align: center;
+    margin: 0 0 30px;
+  }
+  &--button{
+    width: 704px;
+    height: 220px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid $_color-line_light;
+  }
+  .btn-back{
+    width: 196px;
+    &:first-child{
+      margin-right: 20px;
+    }
+  }
+}

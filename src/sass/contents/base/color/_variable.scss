@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+// カラー一覧
+//
+// 本サービスの基になるカラースタイル一覧になります
+//
+// $_color-base            - #f5f5f5; 
+// $_color-main            - #2d2d2d; 
+// $_color-text            - #333;     base text color
+// $_color-text_light      - #666;     lighter text color
+// $_color-text_link       - #218ac6;  link text color 
+// $_color-strong          - #c84a6a;  strong color
+// $_color-line            - #ccc;     line color
+// $_color-line_light      - #e5e5e5;  lighter line color
+// $_color-blue            - #4f97c0;  blue color
+// $_color-blue_light      - #eef9fb;  lighter blue color
+// $_color-blue_vivid      - #006fb4;  vivid blue color
+// $_color-favorite        - #a2aa26;  favorite color
+// $_color-side-bg         - #5a5f64;  side bg color
+// $_color-side-bg_hover   - #696f75;  side hover bg color
+// $_color-side-bg_active  - #678698;  side active bg color
+// 
+// Styleguide base.color
+
+
+// base color variable
+$_color-base: #f5f5f5;
+$_color-main: #2d2d2d;
+
+// text color variable
+$_color-text: #333;
+$_color-text_light: #666;
+$_color-text_lighter: #aaa;
+$_color-text_placeholder: #ccc;
+$_color-text_link: #4d68b7;
+
+
+// line color variable
+$_color-line: #ccc;
+$_color-line_light: #e5e5e5;
+
+
+$_color-strong: #cb1b1b; // error text
+
+
+$_color-blue: #4f97c0;
+$_color-blue_light: #eef9fb;
+$_color-blue_vivid: #006fb4;
+$_color-green_light: #c2dfe2;
+
+$_color-favorite: #a2aa26;
+$_color-favorited: #C0C0C0;
+
+
+// side
+// ---------------------
+$_color-side-bg: #5a5f64;
+$_color-side-bg_hover: #696f75;
+$_color-side-bg_active: #678698;
+
+
+// social
+$_color-facebook: #3c5898;
+$_color-linkedin: #4494b6;
+$_color-googleplus: #de5a3d;
+$_color-twitter: #419afd;
+$_color-mail: #969696;

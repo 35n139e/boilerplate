@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.footer{
+  grid-area: footer;
+  width: 100%;
+  margin-top: auto;
+  &__inner{
+    background: $_color-main;
+    border-bottom: 1px solid $_color-line_light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  &--navigation{
+    display: flex;
+    flex-wrap:wrap;
+    a{
+      color: #fff;
+      display: block;
+      padding: 0.5em;
+      margin-left: 1em;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+  }
+  &--copyright{    
+    font-size: $_fontSize-S;
+    padding: 0 $_gutter;
+    color: #fff;
+  }
+}

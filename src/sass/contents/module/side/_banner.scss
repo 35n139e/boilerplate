@@ -1,0 +1,31 @@
+@charset "utf-8";
+// バナーリスト
+//
+// バナーリストのモジュールになります。
+//
+// Markup:
+// <ul class="mod-side-banner">
+//   <li><a href=""><img src="/resources/images/banner.png"></a></li>
+//   <li><a href=""><img src="/resources/images/banner.png"></a></li>
+//   <li><a href=""><img src="/resources/images/banner.png"></a></li>
+// </ul>
+// 
+// Styleguide module.side.banner
+
+.mod-side-banner {
+  margin: $_gutter;
+  li{
+    margin-top: $_gutter;
+    text-align: center;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+  a{
+    transition: filter 0.3s ease;
+    &:hover{
+      filter: opacity(0.6);
+      background-color: $_color-blue_light;
+    }
+  }
+}

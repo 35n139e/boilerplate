@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+@mixin icon-link($color:#ff0, $size:4px, $arrowPosition:"left" , $arrowNegativeDirection:"left"){
+	position: relative;
+	padding-#{$arrowPosition}: ($size * 6);
+	.arrow{
+		@include square(0);
+		border: solid transparent;
+		top: 50%;
+		#{$arrowPosition}: ($size / 2);
+		content: "";
+		position: absolute;
+		border-#{$arrowNegativeDirection}-color: $color;
+		border-width: $size;
+		margin-top: -#{$size};
+	}
+	&:hover .arrow{
+		border-#{$arrowNegativeDirection}-color: darken($color, 13%);
+	}
+}
+
+@mixin icon-arrow($color:#ff0, $size:4px, $arrowNegativeDirection:"left"){
+	display: inline-block;
+	@include square(0);
+	border: solid transparent;
+	content: "";
+	border-#{$arrowNegativeDirection}-color: $color;
+	border-width: $size;
+
+	@if $arrowNegativeDirection == "left"{
+		margin-left: $size;
+	}@else if $arrowNegativeDirection == "right"{
+		margin-right: $size;
+	}
+}
+
+@mixin icon-arrow-line($color:#ff0, $size:4px, $arrowNegativeDirection:"right"){
+  &:after{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		content: "";
+		vertical-align: middle;
+		@include square($size);
+		border-#{$arrowNegativeDirection}: 1px solid $color;
+		transform: rotate(45deg);
+		@if $arrowNegativeDirection == "left"{
+			border-bottom: 1px solid $color;
+		}@else if $arrowNegativeDirection == "right"{
+			border-top: 1px solid $color;
+		}
+	}
+}
+

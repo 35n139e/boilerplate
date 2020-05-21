@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+
+// button,
+// select,
+// textarea,
+// input{
+// 	-webkit-appearance: none;
+// }
+
+button{
+	font: inherit;
+	background: none;
+	border: 0;
+	padding: 0;
+	outline: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+
+select,
+textarea,
+input[type="file"],
+input[type="text"],
+input[type="password"]{
+  font-family: $_baseFont-family;
+	transition: border linear 0.2s;
+	background: #fff;
+	border: 1px solid $_color-line_light;
+	border-radius: 3px;
+	box-sizing: border-box;
+	&:focus {
+		border-color: $_color-text_link;
+		outline: 0;
+	}
+	&.is-error{
+		border-color: $_color-strong;
+		background-color: lighten($_color-strong, 53%);
+	}
+}
+select{
+  option[selected]{
+    // color: $_color-notice;
+  }
+}
+textarea {
+	height: auto;
+}
+
+
+:placeholder-shown {
+	color:$_color-text_placeholder; }
+
+// /* Google Chrome, Safari, Opera 15+, Android, iOS */
+// ::-webkit-input-placeholder {
+// 	color: $_color-text_placeholder; }
+
+// /* Firefox 18- */
+// :-moz-placeholder {
+// 	color: $_color-text_placeholder; opacity: 1; }
+
+// /* Firefox 19+ */
+// ::-moz-placeholder {
+// 	color: $_color-text_placeholder; opacity: 1; }
+
+// /* IE 10+ */
+// :-ms-input-placeholder {
+// 	color: $_color-text_placeholder; }

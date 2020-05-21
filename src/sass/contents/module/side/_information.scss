@@ -1,0 +1,39 @@
+@charset "utf-8";
+// お知らせリスト
+//
+// お知らせリストなどのモジュールになります。
+//
+// Markup:
+// <div class="mod-side-information">
+//   <h2 class="mod-side-information__title">お知らせ</h2>
+//   <ul class="mod-side-information__list">
+//     <li><a href="">利用方法</a></li>
+//     <li><a href="">注意事項</a></li>
+//     <li><a href="">Q&amp;A</a></li>
+//     <li><a href="">お問合せ</a></li>
+//   </ul>
+// </div>
+// 
+// Styleguide module.side.information
+
+.mod-side-information {
+  background-color: $_color-base;
+  margin: $_gutter;
+  &__title{
+    font-weight: bold;
+    text-align: center;
+    padding: $_gutter;
+  }
+  &__list{
+    li{
+      border-top: 1px solid $_color-line_light;
+    }
+    a{
+      padding: ($_gutter/ 2) $_gutter;
+      display: block;
+      &:hover{
+        background-color: $_color-blue_light;
+      }
+    }
+  }
+}

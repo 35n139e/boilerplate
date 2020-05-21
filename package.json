@@ -1,0 +1,55 @@
+{
+  "name": "matrix",
+  "version": "1.0.0",
+  "description": "greatest build system:)",
+  "scripts": {
+    "imagemin": "spritesmith && node imagemin.js",
+    "pdf": "cpx \"./src/pdf/**/*.pdf\" ./dist/pdf/",
+    "clean": "rimraf ./dist",
+    "test": "webpack --mode development --display-error-details",
+    "dev": "npm run clean && npm run pdf && npm run imagemin && webpack --mode development --watch",
+    "stg": "npm run clean && npm run pdf && npm run imagemin && webpack --mode development",
+    "prod": "npm run clean && npm run pdf && npm run imagemin && webpack --mode production"
+  },
+  "repository": "",
+  "author": {
+    "name": "35n139e"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "@babel/preset-env": "7.2.0",
+    "autoprefixer": "9.1.5",
+    "babel-loader": "8.0.4",
+    "cpx": "1.5.0",
+    "css-loader": "1.0.1",
+    "cssnano": "4.1.7",
+    "imagemin": "6.0.0",
+    "imagemin-gifsicle": "6.0.1",
+    "imagemin-keep-folder": "5.3.2",
+    "imagemin-mozjpeg": "8.0.0",
+    "imagemin-pngquant": "6.0.0",
+    "imagemin-svgo": "7.0.0",
+    "mini-css-extract-plugin": "0.4.5",
+    "node-sass": "4.11.0",
+    "path": "0.12.7",
+    "postcss-loader": "^3.0.0",
+    "rimraf": "2.6.2",
+    "sass-loader": "7.1.0",
+    "spritesmith-cli": "1.1.2",
+    "uglifyjs-webpack-plugin": "2.0.1",
+    "webpack": "4.27.1",
+    "webpack-cli": "3.1.2"
+  },
+  "engines": {
+    "node": "8.9.4"
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "highcharts": "7.0.0",
+    "highcharts-vue": "1.2.0",
+    "lodash": "4.17.11",
+    "npm": "6.4.1",
+    "vue": "2.5.19"
+  }
+}

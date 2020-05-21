@@ -1,0 +1,247 @@
+@charset "utf-8";
+// ウォッチリスト
+//
+// 気になる人物リストなどのモジュールになります。
+//
+// Markup:
+// <ul class="mod-list-watch">
+//   <li>
+//     <a href="" class="mod-list-watch__item">
+//       <div class="mod-list-watch__image">
+//         <div class="mod-list-watch__image__mask">
+//           <img src="/resources/images/qa.png">
+//         </div>
+//       </div>
+//       <div class="mod-list-watch__text">
+//         <div class="mod-list-watch__scout">
+//           <span class="mod-list-watch__scout__date"></span>
+//           <span class="mod-list-watch__scout__status _done">スカウト済（2018/12/31）</span>
+//         </div>
+//         <div class="mod-list-watch__profile">
+//           <span class="mod-list-watch__profile__age">41歳</span>
+//           <span class="mod-list-watch__profile__address">神奈川県　横浜市在住</span>
+//           <span class="mod-list-watch__profile__status">在職中</span>
+//         </div>
+//         <ul class="mod-list-watch__data">
+//           <li>
+//             <svg class="icon" role="img">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/images/sprite.svg#income"></use>
+//             </svg>希望年収：450万円～600万円
+//           </li>
+//           <li> 
+//             <svg class="icon" role="img">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/images/sprite.svg#position"></use>
+//             </svg>希望職種：システムエンジニア
+//           </li>
+//           <li> 
+//             <svg class="icon" role="img">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/images/sprite.svg#address"></use>
+//             </svg>希望勤務地：北海道 / 神奈川県 / 京都府
+//           </li>
+//           <li> 
+//             <svg class="icon" role="img">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/images/sprite.svg#education"></use>
+//             </svg>〇〇〇〇〇〇大学　▲▲▲▲▲▲▲▲学部卒
+//           </li>
+//           <li> 
+//             <svg class="icon" role="img">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/images/sprite.svg#occupation"></use>
+//             </svg>職位：システムエンジニア（係長）
+//           </li>
+//         </ul>
+//       </div>
+//     </a>
+//   </li>
+//   <li>
+//     <a href="" class="mod-list-watch__item {{modifier_class}}">
+//       <div class="mod-list-watch__image">
+//         <div class="mod-list-watch__image__mask">
+//           <img src="/resources/images/qa.png">
+//         </div>
+//       </div>
+//       <div class="mod-list-watch__text">
+//         <div class="mod-list-watch__scout">
+//           <span class="mod-list-watch__scout__status">スカウト未</span>
+//         </div>
+//         <div class="mod-list-watch__profile">
+//           <span class="mod-list-watch__profile__age">41歳</span>
+//           <span class="mod-list-watch__profile__address">神奈川県　横浜市在住</span>
+//           <span class="mod-list-watch__profile__status">在職中</span>
+//         </div>
+//         <ul class="mod-list-watch__data">
+//           <li>
+//             <svg class="icon" role="img">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/images/sprite.svg#income"></use>
+//             </svg>希望年収：450万円～600万円
+//           </li>
+//           <li> 
+//             <svg class="icon" role="img">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/images/sprite.svg#position"></use>
+//             </svg>希望職種：システムエンジニア
+//           </li>
+//           <li> 
+//             <svg class="icon" role="img">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/images/sprite.svg#address"></use>
+//             </svg>希望勤務地：北海道 / 神奈川県 / 京都府
+//           </li>
+//           <li> 
+//             <svg class="icon" role="img">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/images/sprite.svg#education"></use>
+//             </svg>〇〇〇〇〇〇大学　▲▲▲▲▲▲▲▲学部卒
+//           </li>
+//           <li> 
+//             <svg class="icon" role="img">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/images/sprite.svg#occupation"></use>
+//             </svg>職位：システムエンジニア（係長）
+//           </li>
+//         </ul>
+//       </div>
+//     </a>
+//   </li>
+//   <li>
+//     <a href="" class="mod-list-watch__readmore">全てのメッセージを表示する</a>
+//   </li>
+// </ul>
+// 
+// Styleguide module.list.watch
+
+.mod-list-watch {
+  border-top: 1px solid $_color-line;
+  border-bottom: 1px solid $_color-line;
+  @include breakpoint("phone-wide", $type: min) {
+    border-left: 1px solid $_color-line;
+    border-right: 1px solid $_color-line;
+  }
+  >li {
+    border-top: 1px solid $_color-line;
+    &:first-child {
+      border-top: none;
+    }
+  }
+  &__item {
+    display: block;
+    background-color: #fff;
+    padding: $_gutter;
+    position: relative;
+    color: $_baseFont-Color;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $_color-blue_light;
+      text-decoration: none;
+    }
+    @include breakpoint("phone-wide", $type: min) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;  
+    }
+  
+  }
+  &__image {
+    margin-right: $_gutter;
+    @include breakpoint("phone-wide", $type: max) {
+      position: absolute;
+      top: 30px;
+      left: 20px;
+    }
+    &__mask {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      overflow: hidden;
+      @include breakpoint("phone-wide", $type: min) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  &__text {
+    flex: 1;
+    position: relative;
+  }
+  &__profile {
+    font-size: $_fontSize-M;
+    font-weight: bold;
+    @include breakpoint("phone-wide", $type: max) {
+      padding-left: 50px;
+    }
+
+    @include breakpoint("tablet", $type: min) {
+      padding-right: 13rem;
+    }
+
+    &__age,
+    &__address{
+      &:after{
+        content: "/";
+        margin: 0 0.3em;
+      }
+    }
+  }
+  &__data {
+    margin-top: 1rem;
+    color: $_color-text_light;
+    line-height: 130%;
+    font-size: $_fontSize-M;
+
+    li{
+      margin-bottom:0.1rem;
+    }
+    @include breakpoint("phone-wide", $type: min) {
+      margin-top: 0.3rem;
+      li{
+        display: inline-block;
+        margin-right:1rem;
+      }  
+    }
+    .icon{
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      fill:$_color-text_light;
+      margin-right: 0.3em;
+    }
+  }
+  &__scout {
+    color: #999;
+    font-size: $_fontSize-S;
+    text-align: right;
+    margin-bottom: 0.3rem;
+    @include breakpoint("phone-wide", $type: max) {
+      font-size: $_fontSize-S;
+      padding-left: 50px;
+    }
+    @include breakpoint("tablet", $type: min) {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &__date{
+      &:after{
+        content: "/";
+        margin: 0 0.3em;
+      }
+    }
+    &__status{
+      &._done{
+        color: #34a2b2;
+      }
+    }
+  }
+  &__readmore {
+    background-color: #fff;
+    display: block;
+    text-align: center;
+    padding: $_gutter;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $_color-blue_light;
+    }
+  }
+}
+.icon-income{
+  width: 1em;
+  height: 1em;
+  fill: #333;
+}

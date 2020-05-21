@@ -1,0 +1,216 @@
+@charset "utf-8";
+// 入力テーブル
+//
+// 入力テーブルのモジュールになります。
+//
+// Markup:
+// <div class="mod-form-table">
+//   <div class="mod-form-table__row">
+//     <div class="mod-form-table__header">
+//       <strong class="mod-form-table__header__required">（必須）</strong>
+//       <label class="mod-form-table__header__label" for="test01">ラベルラベル</label>
+//     </div>
+//     <div class="mod-form-table__body">
+// 　　　<div class="mod-form-table__body__invalid">
+// 　　　  <strong>エラーメッセージ</strong>
+// 　　　</div>
+//       <input type="text" id="test01">
+//     </div>
+//   </div>
+//   <div class="mod-form-table__row">
+//     <label class="mod-form-table__header" for="test02">ラベルラベル</label>
+//     <div class="mod-form-table__body">
+//       <select name="" id="test02">
+//         <option value="">あいうえお</option>
+//         <option value="">あいうえお</option>
+//         <option value="">あいうえお</option>
+//         <option value="">あいうえお</option>
+//       </select>
+//     </div>
+//   </div>
+//   <div class="mod-form-table__row">
+//     <div class="mod-form-table__header">
+//       <div class="mod-form-table__header__label" for="">写真</div>
+//     </div>
+//     <div class="mod-form-table__body">
+//       <div class="mod-form-table__photo">
+//         <div class="mod-form-table__photo__list">
+//           <div class="mod-form-table__photo__list__img"><img src="/resources/images/banner.png"></div>
+//           <div class="mod-form-table__photo__list__caption">キャプションキャプション</div>
+//         </div>
+//         <div class="mod-form-table__photo__list">
+//           <div class="mod-form-table__photo__list__img"><img src="/resources/images/banner.png"></div>
+//           <div class="mod-form-table__photo__list__caption">キャプションキャプション</div>
+//         </div>
+//         <div class="mod-form-table__photo__list">
+//           <div class="mod-form-table__photo__list__img"><img src="/resources/images/banner.png"></div>
+//           <div class="mod-form-table__photo__list__caption">キャプションキャプション</div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="mod-form-table__row">
+//     <div class="mod-form-table__header">
+//       <label class="mod-form-table__header__label" for="">写真</label>
+//     </div>
+//     <div class="mod-form-table__body">
+//       <div class="mod-form-table__input-photo">
+//         <div class="mod-form-table__input-photo__img"><img src="/resources/images/banner.png"></div>
+//         <div class="mod-form-table__input-photo__label">
+//           <input class="_full" type="file">
+//           <input class="_full" type="text">
+//         </div>
+//       </div>
+//       <div class="mod-form-table__input-photo">
+//         <div class="mod-form-table__input-photo__img"><img src="/resources/images/banner.png"></div>
+//         <div class="mod-form-table__input-photo__label">
+//           <input class="_full" type="file">
+//           <input class="_full" type="text">
+//         </div>
+//       </div>
+//       <div class="mod-form-table__input-photo">
+//         <div class="mod-form-table__input-photo__img _nophoto">写真3</div>
+//         <div class="mod-form-table__input-photo__label">
+//           <input class="_full" type="file">
+//           <input class="_full" type="text">
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="mod-form-table__footer">
+//      <div class="mod-form-table__footer__support">
+//        <a href="">プライバシーポリシー</a>
+//      </div>
+//     <a class="btn-default" href="#">defaultボタン</a>
+//   </div>
+// </div>
+// 
+// Styleguide module.form.table
+
+.mod-form-table {
+  border-top: 1px solid $_color-line;
+  &__row {
+    border-bottom: 1px solid $_color-line;
+    padding: $_gutter;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    @include breakpoint("tablet", $type: min) {
+      flex-direction: row;
+      padding-top: ($_gutter / 2);
+      padding-bottom: ($_gutter / 2);
+    }
+  }
+  &__header {
+    width: 100%;
+    display: flex;
+    font-weight: bold;
+    flex-wrap: nowrap;
+    margin-bottom: 1em;
+    @include breakpoint("tablet", $type: min) {
+      width: 16rem;
+      font-weight: normal;
+      justify-content: space-between;
+      margin-bottom: 0;
+      padding-right: $_gutter;
+      padding-top: 0.6em;
+    }
+    &__label{
+      order: 1;
+    }
+    &__required{
+      color: $_color-strong;
+      order: 2;
+    }
+  }
+  &__body {
+    flex:1;
+    &__invalid{
+      margin-bottom: 5px;
+      strong{
+        color: $_color-strong;
+      }
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__footer{
+    text-align: center;
+    margin: 30px 0;
+    &__support{
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  &__inner {
+    margin-bottom: 5px;
+  }
+  
+  &__input-photo {
+    display: flex;
+    margin-top: $_gutter;
+    justify-content: space-between;
+    &:first-child {
+      margin-top: 0;
+    }      
+    &__img {
+      order: 2;
+      width: 33%;
+      max-width: 180px;
+      &._nophoto {
+        border: dashed 4px #ccc;
+        padding: 5px;   
+      }
+    }
+    &__label {
+      flex: 1;
+      padding-right: $_gutter;
+      input[type="file"] {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__photo{
+    display: flex;
+    flex-direction: column;
+    @include breakpoint("tablet", $type: min) {
+      flex-direction: row;
+    }
+    &__list {
+      text-align: center;
+      margin-top: $_gutter * 1.5;
+      &:first-child{
+        margin-top: 0;
+      }
+      @include breakpoint("phablet", $type: min) {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include breakpoint("tablet", $type: min) {
+        margin-top: 0;
+        margin-left: $_gutter;
+        margin-right: 0;
+        width:calc((100% - 40px)/3);
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+      &__img{
+        width: 100%;
+        margin: 0 auto;
+        img{
+          @include breakpoint("tablet", $type: max) {
+            width: 100%;
+          }
+        }
+      }
+      &__caption{
+        margin-top: 0.5em;
+        font-size: $_fontSize-S;
+        text-align: left;
+      }
+    }
+  }
+}

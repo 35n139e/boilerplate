@@ -1,0 +1,9 @@
+@charset "utf-8";
+.main {
+  flex:1;
+  &--content{
+    width: $_grid-pcWidth;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+}

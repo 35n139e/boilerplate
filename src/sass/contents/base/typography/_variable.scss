@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+// base typography variable
+
+$_baseFont-Color: $_color-text;
+
+$_baseFont-family : -apple-system, Helvetica Neue, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Verdana, Meiryo, sans-serif !default;
+
+$_baseFont-Size: 14px !default;
+$_baseLineHeight: 1.6 !default;
+
+$_serifFont-family : Georgia, Times, "Times New Roman", serif;
+
+$_fontSize-MIN  : (11/14) * 1rem;  //11px
+$_fontSize-S    : (12/14) * 1rem;  //12px
+$_fontSize-M    : (18/14) * 1rem;  //16px
+$_fontSize-L    : (26/14) * 1rem;  //18px
+$_fontSize-LL   : (28/14) * 1rem;  //28px
+$_fontSize-MAX  : (45/14) * 1rem;  //18px

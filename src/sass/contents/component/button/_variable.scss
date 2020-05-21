@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+// ボタン
+//
+// 用途用途用途用途用途用途用途用途用途
+//
+// Markup:
+// <a class="btn-default {{modifier_class}}" href="#">defaultボタン</a>
+// <button class="btn-default {{modifier_class}}">defaultボタン</button>
+//
+// ._large - large size
+// ._small - small size
+// 
+// Styleguide component.button
+
+[class^="btn-"]{
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+  padding: 0.8em 2em;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  vertical-align: middle;
+  &:hover{
+    text-decoration: none;
+  }
+  &._large{
+    width: 312px;
+    padding: ($_gutter * 1.2) $_gutter;
+  }
+  &._small{
+    width: 128px;
+    padding: ($_gutter / 2);
+  }
+}

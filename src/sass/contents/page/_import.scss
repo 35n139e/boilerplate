@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// page
+// 
+// 仕様
+// モジュールやコンポーネントだけでは実現できないユニークスタイルを当てたい場合に利用します。
+// 
+// - ネーミングルールは、'page-' + '{{dirname or filename}} + '{{dirname or filename}}' です。
+// - 現状は一階層目のディレクトリでファイルを作成していますが、増え過ぎた場合にはディレクトリを作成して下さい。
+// - '.main-contents'のサブクラスを想定しています。もしレイアウト（ヘッダー、フッター、containerレベル）から変更したい場合は、このクラスでの対応は控えてください。
+// 
+// Styleguide page
+
+.page{
+	@import "index";
+	@import "error";
+	@import "loginout/import";
+	@import "appli/import";
+	@import "manager/import";
+	@import "matrix/import";
+	@import "member/import";
+}

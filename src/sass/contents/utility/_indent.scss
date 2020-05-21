@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+// インデント
+//
+// スマホサイズ（480px以下）のときに、両サイドにインデントを入れるユーティリティになります。
+//
+// Markup:
+// <div class="util-indent">util-indent</div>
+//
+// Styleguide Utility.indent
+
+.util-indent{
+	@include breakpoint("phone-wide", $type: max) {
+		padding-left: $_gutter;
+		padding-right: $_gutter;
+	}
+}

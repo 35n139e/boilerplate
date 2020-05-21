@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+// 非表示
+//
+// 非表示させる際に使用するユーティリティです。
+// ブレイクポイントを起点に非表示させるクラスも用意しました。
+//
+// Markup:
+// <div class="util-hide">非表示非表示</div>
+// <div class="util-hide-pc">PC（1024px以上）で非表示</div>
+// <div class="util-hide-tablet">タブレット（768px-1023px）で非表示</div>
+// <div class="util-hide-phone">スマホ（768px以下）で非表示</div>
+//
+// Styleguide Utility.hide
+
+.util-hide{
+	display: none !important;
+}
+.util-hide-pc {
+	@include breakpoint("tablet-wide", $type: min) {
+		display: none!important;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width:1024px){
+	.util-hide-tablet {
+		display: none!important;
+	}
+}
+
+.util-hide-phone {
+	@include breakpoint("tablet", $type: max) {
+		display: none!important;
+	}
+}
