@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "axios": "0.18.0",
-    "highcharts": "7.0.0",
+    "highcharts": "8.2.0",
     "highcharts-vue": "1.2.0",
     "lodash": "4.17.11",
     "npm": "6.4.1",
