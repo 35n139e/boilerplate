@@ -31,7 +31,7 @@
     "imagemin-pngquant": "6.0.0",
     "imagemin-svgo": "7.0.0",
     "mini-css-extract-plugin": "0.4.5",
-    "node-sass": "4.11.0",
+    "node-sass": "4.14.1",
     "path": "0.12.7",
     "postcss-loader": "^3.0.0",
     "rimraf": "2.6.2",
